@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <form method="post" enctype="multipart/form-data">
+      <form action="index.php?rota=atualiza" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+        <input type="hidden" name="id" class="form-control" value="<?php echo $anime->getId() ?>" >
+      </div>
         <div class="form-group">
           <label for="titulo">Título:</label>
           <input type="text" name="titulo" class="form-control" placeholder="Título" value="<?php echo $anime->getTitulo() ?>">

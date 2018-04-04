@@ -8,7 +8,7 @@
 
 		//adiciona o anime ao banco
 		public function adiciona($anime){
-			$sql = "INSERT INTO anime (titulo,descricao,endereco_imagem) VALUES (:titulo, :descricao,:endereco_imagem)";
+			$sql = "INSERT INTO anime (titulo,descricao,endereco_imagem) VALUES (:titulo, :descricao, :endereco_imagem)";
 
 			$query = $this->conexao->prepare($sql);
 
@@ -51,12 +51,12 @@
 			return $anime;
 		}
 		//atualiza os dados de um aluno
-		public function atualiza($aluno){
-			$sql = "UPDATE aluno SET nome = :nome, matricula = :matricula WHERE id=:id";
+		public function atualiza($anime){
+			$sql = "UPDATE anime SET titulo=:titulo, descricao=:descricao WHERE id=:id";
 
 			$query = $this->conexao->prepare($sql);
-
-			$query->execute(['nome'=>$aluno->getNome(),'matricula'=>$aluno->getMatricula(), 'id'=>$aluno->getId()]);
+      
+			$query->execute(['titulo'=>$anime->getTitulo(),'descricao'=>$anime->getDescricao(), 'id'=>$anime->getId()]);
 		}
 
 		//remove um aluno pelo id

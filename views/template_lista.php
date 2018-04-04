@@ -13,7 +13,7 @@
 				?>
 				  <div class="col-sm-6 col-md-4">
 				    <div class="thumbnail">
-				    	<img src="<?php echo $animes[$posicao_anime]->getEnderecoImagem()?>" width="280px" height="170px" alt="Sem Imagem">
+				    	<img src="<?php echo $animes[$posicao_anime]->getEnderecoImagem(); ?>" width="280px" height="170px" alt="Sem Imagem">
 					    <div class="caption">
 					    	<h3><?php echo $animes[$posicao_anime]->getTitulo(); ?></h3>
 					        <p><?php echo $animes[$posicao_anime]->getDescricao(); ?></p>
